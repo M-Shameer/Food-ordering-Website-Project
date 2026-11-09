@@ -1,0 +1,684 @@
+
+/* Color palette */
+:root {
+    --espresso: #20140F;
+    --coffee-brown: #68433A;
+    --caramel: #C48A5A;
+    --latte: #E7D6C1;
+    --cream: #FAF6F0;
+}
+
+/* Basic page styles */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 25px;
+}
+
+body {
+    min-height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--espresso);
+}
+
+/* Navigation bar */
+.custom-navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    padding: 10px 25px;
+    background: transparent;
+}
+
+.custom-navbar .container-fluid {
+    justify-content: flex-start;
+}
+
+.custom-navbar .navbar-brand {
+    margin-right: 15px;
+}
+
+.custom-navbar .navbar-brand img {
+    width: 50px;
+    height: 50px;
+    border: 3px solid var(--caramel);
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.custom-navbar .navbar-collapse {
+    flex-grow: 0;
+    justify-content: flex-start;
+}
+
+.custom-navbar .navbar-nav {
+    align-items: center;
+    font-family: "Oleo Script", system-ui;
+}
+
+.custom-navbar .nav-link {
+    margin: 5px 10px;
+    color: var(--cream);
+    font-size: 22px;
+}
+
+.custom-navbar .nav-link:hover,
+.custom-navbar .nav-link:focus {
+    color: var(--caramel);
+}
+
+.custom-navbar .navbar-toggler {
+    border-color: var(--caramel);
+}
+
+.custom-navbar .dropdown-menu {
+    border: 1px solid var(--caramel);
+    background-color: rgba(32, 20, 15, 0.95);
+    font-family: "Oleo Script", system-ui;
+}
+
+.custom-navbar .dropdown-item {
+    padding: 10px 15px;
+    color: var(--cream);
+    background-color: transparent;
+}
+
+.custom-navbar .dropdown-item:hover,
+.custom-navbar .dropdown-item:focus {
+    color: var(--caramel);
+    background-color: rgba(104, 67, 58, 0.5);
+}
+
+/* Hero section */
+.hero-image {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding: 130px 5% 50px;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0)),
+        url("pics/hero2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero-text {
+    max-width: 700px;
+    color: var(--cream);
+    text-align: left;
+}
+
+.hero-text h1 {
+    margin-bottom: 20px;
+    font-family: "Pinyon Script", cursive;
+    font-size: 60px;
+}
+
+.hero-text p {
+    max-width: 600px;
+    margin-bottom: 25px;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 15px;
+    color: var(--espresso);
+    background-color: var(--caramel);
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+    color: var(--espresso);
+    background-color: var(--cream);
+}
+
+/* Food menu */
+.food-section {
+    padding: 45px 20px;
+    background-color: var(--latte);
+}
+
+.section-heading {
+    margin-bottom: 15px;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.section-intro {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    font-size: 16px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+/* Food menu */
+.food-section {
+    padding: 45px 20px;
+    background-color: var(--latte);
+}
+
+.section-heading {
+    margin-bottom: 15px;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.section-intro {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    font-size: 16px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+/* Bootstrap food cards */
+.food-card {
+    overflow: hidden;
+    border: 1px solid var(--coffee-brown);
+    border-radius: 16px;
+    color: var(--cream);
+    background-color: var(--coffee-brown);
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(32, 20, 15, 0.18);
+    transition: transform 0.3s ease;
+}
+
+.food-card:hover {
+    transform: translateY(-4px);
+}
+
+.food-card-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.food-card .card-body {
+    padding: 16px;
+}
+
+.food-card .card-title {
+    margin-bottom: 8px;
+    font-size: 20px;
+}
+
+.food-card .card-text {
+    margin-bottom: 12px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.food-price {
+    margin-bottom: 12px;
+    color: var(--cream);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.btn.custom-btn {
+    padding: 7px 18px;
+    border: none;
+    border-radius: 12px;
+    color: var(--espresso);
+    background-color: var(--caramel);
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn.custom-btn:hover {
+    color: var(--espresso);
+    background-color: var(--cream);
+}
+
+
+.container-food-items .card-body {
+    padding: 12px 5px;
+}
+
+.container-food-items .card-title {
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.container-food-items .card-text {
+    margin-bottom: 12px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.btn.custom-btn {
+    padding: 7px 18px;
+    border: none;
+    border-radius: 12px;
+    color: var(--espresso);
+    background-color: var(--caramel);
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn.custom-btn:hover {
+    color: var(--espresso);
+    background-color: var(--cream);
+}
+
+/* About us */
+.about-section {
+    padding: 60px 25px;
+    background-color: var(--cream);
+    color: var(--espresso);
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.section-label {
+    margin-bottom: 10px;
+    color: var(--coffee-brown);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.about-intro {
+    margin: 20px auto 0;
+    font-size: 17px;
+    line-height: 1.9;
+}
+
+.chef-heading {
+    margin-bottom: 30px;
+    font-family: "Oleo Script", system-ui;
+    font-size: 30px;
+    text-align: center;
+}
+
+.chef-row {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 280px));
+    justify-content: center;
+    gap: 35px;
+}
+
+.chef-column {
+    min-width: 0;
+    text-align: center;
+}
+
+.chef-column img {
+    display: block;
+    width: 100%;
+    height: 240px;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+.chef-info h4 {
+    margin-bottom: 8px;
+    font-family: "Oleo Script", system-ui;
+    font-size: 22px;
+}
+
+.chef-title {
+    margin-bottom: 12px;
+    color: var(--coffee-brown);
+    font-weight: bold;
+}
+
+.chef-info p {
+    line-height: 1.7;
+}
+
+.chef-button {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 8px 20px;
+    border-bottom: 1px solid var(--caramel);
+    color: var(--espresso);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.chef-button:hover {
+    color: var(--coffee-brown);
+}
+
+/* Special offers */
+.special-offers {
+    padding: 55px 25px;
+    background-color: var(--latte);
+    color: var(--espresso);
+    text-align: center;
+}
+
+.offers-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 350px));
+    justify-content: center;
+    gap: 50px;
+    max-width: 850px;
+    margin: 35px auto 0;
+}
+
+.offer-item {
+    padding: 10px 20px 20px;
+    text-align: left;
+}
+
+.offer-number {
+    margin-bottom: 12px;
+    color: var(--coffee-brown);
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.offer-item h3 {
+    margin-bottom: 15px;
+    font-family: "Oleo Script", system-ui;
+    font-size: 29px;
+}
+
+.offer-item p {
+    line-height: 1.8;
+}
+
+.offer-item h4 {
+    margin: 18px 0;
+    color: var(--coffee-brown);
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.offer-button {
+    display: inline-block;
+    padding: 8px 0;
+    border-bottom: 2px solid var(--caramel);
+    color: var(--espresso);
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.offer-button:hover {
+    color: var(--coffee-brown);
+}
+
+/* Contact section */
+.contact-section {
+    padding: 35px 20px;
+    background-color: var(--espresso);
+    color: var(--cream);
+    text-align: center;
+}
+
+.contact-section h2 {
+    margin-bottom: 15px;
+    font-family: "Oleo Script", system-ui;
+}
+
+.contact-button {
+    display: inline-block;
+    margin: 10px 0 20px;
+    padding: 9px 22px;
+    border-radius: 10px;
+    color: var(--espresso);
+    background-color: var(--caramel);
+    text-decoration: none;
+}
+
+.contact-button:hover {
+    color: var(--espresso);
+    background-color: var(--cream);
+}
+
+.copyright {
+    margin: 15px 0 0;
+    font-size: 14px;
+}
+
+/* Tablet layout */
+@media (max-width: 1000px) {
+    .container-food-items {
+        grid-template-columns: repeat(2, minmax(0, 300px));
+    }
+
+    .chef-row {
+        grid-template-columns: repeat(2, minmax(0, 280px));
+    }
+
+    .custom-navbar .nav-link {
+        margin: 5px;
+        font-size: 18px;
+    }
+}
+
+/* Mobile layout */
+@media (max-width: 650px) {
+    .custom-navbar {
+        padding: 8px 15px;
+    }
+
+    .custom-navbar .navbar-collapse {
+        width: 100%;
+        margin-top: 10px;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: rgba(32, 20, 15, 0.95);
+    }
+
+    .custom-navbar .navbar-nav {
+        align-items: flex-start;
+    }
+
+    .custom-navbar .nav-link {
+        margin: 5px 0;
+        font-size: 18px;
+    }
+
+    .hero-image {
+        min-height: 85vh;
+        padding: 130px 20px 45px;
+    }
+
+    .hero-text h1 {
+        font-size: 42px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+    }
+
+    .food-section,
+    .about-section,
+    .special-offers {
+        padding: 40px 18px;
+    }
+
+    .section-heading {
+        font-size: 29px;
+    }
+
+    .container-food-items,
+    .chef-row,
+    .offers-row {
+        grid-template-columns: minmax(0, 350px);
+    }
+
+    .chef-row {
+        gap: 40px;
+    }
+
+    .chef-column img {
+        height: 250px;
+    }
+
+    .offer-item {
+        padding: 10px 5px 25px;
+    }
+}
+
+/* Customer Feedback */
+.feedback-section {
+    padding: 55px 25px;
+    background-color: var(--cream);
+    color: var(--espresso);
+}
+
+.feedback-card {
+    height: 100%;
+    border: 1px solid var(--coffee-brown);
+    border-radius: 14px;
+    background-color: var(--latte);
+    text-align: center;
+    box-shadow: 0 5px 12px rgba(32, 20, 15, 0.12);
+}
+
+.feedback-stars {
+    color: var(--coffee-brown);
+    font-size: 22px;
+    letter-spacing: 3px;
+}
+
+.feedback-card .card-title {
+    margin-top: 18px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Order Form */
+.order-section {
+    padding: 55px 20px;
+    background-color: var(--latte);
+    color: var(--espresso);
+}
+
+.order-form-container {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 25px;
+    border: 1px solid var(--coffee-brown);
+    border-radius: 15px;
+    background-color: var(--cream);
+    box-shadow: 0 5px 15px rgba(32, 20, 15, 0.12);
+}
+
+.order-form-container .form-label {
+    font-weight: bold;
+}
+
+.order-form-container .form-control:focus,
+.order-form-container .form-select:focus {
+    border-color: var(--caramel);
+    box-shadow: 0 0 0 0.25rem rgba(196, 138, 90, 0.25);
+}
+
+.order-total {
+    margin: 20px 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: var(--espresso);
+    color: var(--espresso);
+}
+
+.contact-section h2 {
+    color: var(--caramel);
+    font-family: "Oleo Script", cursive;
+}
+
+.contact-section h3 {
+    color: var(--coffee-brown);
+    margin-bottom: 20px;
+}
+
+.contact-info,
+.contact-form-container {
+     font-family: "Oleo Script", system-ui;
+    background-color: var(--latte);
+    border: 1px solid var(--latte);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(32, 20, 15, 0.08);
+}
+
+.contact-info a {
+    color: var(--coffee-brown);
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    color: var(--caramel);
+    text-decoration: underline;
+}
+
+.contact-section .form-control {
+    border-color: var(--latte);
+}
+
+.contact-section .form-control:focus {
+    border-color: var(--caramel);
+    box-shadow: 0 0 0 0.2rem rgba(196, 138, 90, 0.2);
+}
+
+.contact-section .custom-btn {
+    background-color: var(--coffee-brown);
+    color: white;
+    border: none;
+}
+
+.contact-section .custom-btn:hover {
+    background-color: var(--espresso);
+    color: white;
+}
+
+.site-footer {
+    background-color: var(--latte);
+    color: white;
+    margin-top: 0px;
+    font-family: "Oleo Script", system-ui;
+}
+
+.site-footer a {
+    color: var(--espresso);
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Footer styling */
+.site-footer {
+    background-color: var(--latte);
+    color: var(--espresso);
+    margin-top: 0px;
+}
+
+.site-footer a {
+    color: var(--caramel);
+    text-decoration: none;
+    margin: 0 5px;
+    font-family: "Oleo Script", system-ui;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+}
+
+
